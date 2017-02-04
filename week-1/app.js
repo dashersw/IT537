@@ -2,8 +2,17 @@ class PeopleService {
     constructor($rootScope) {
         window.people = this;
 
-        this.people = this._load();
+        this.people = [];
         this.$rootScope = $rootScope;
+
+        fetch('./people.json').
+            then(res => res.json()).
+            then(people => {
+                this.people.length = 0;
+                people.forEach(p => this.people.push(p));
+
+                this._save();
+            });
     }
 
     addPerson(person) {
