@@ -1,0 +1,78 @@
+body {
+    background: #3392ab;
+    color: white;
+    padding-top: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.people {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.person {
+    border-radius: 10px;
+    cursor: pointer;
+    perspective: 800px;
+    margin: 10px;
+    min-width: 15vw;
+}
+
+.person:hover,
+.person.flipped {
+    z-index: 1;
+}
+
+.faces {
+    transform-style: preserve-3d;
+    background: #3392ab;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.25);
+    transition: 0.6s;
+}
+
+.person:hover .faces,
+.person.flipped .faces {
+    box-shadow: 0 0px 60px rgba(0, 0, 0, 0.2);
+    background: #3392ab;
+    transform: rotateY(180deg) translateZ(-200px);
+    transform-origin: 50% 50%;
+}
+
+.face {
+    padding: 20px;
+    backface-visibility: hidden;
+}
+
+.front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3em;
+}
+
+.front h2 {
+    font-weight: 300!important;
+    letter-spacing: 2px;
+}
+
+.back {
+    background: rgb(255, 245, 224);
+    color: #555;
+    transform: rotateY(180deg) translateZ(1px);
+    min-height: 10vw;
+}
+
+.back ul {
+    list-style-type: none;
+    padding: 15px;
+}

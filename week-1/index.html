@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="it537-week-1">
+
+<head>
+    <title>IT537-week-1</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="PeopleController as ctrl">
+    <h1>IT537 People</h1>
+    <div class="people">
+        <div class="person" ng-repeat="person in ctrl.people track by person.id">
+            <div class="faces">
+                <div class="front face">
+                    <h2>{{person.name}}</h2>
+                </div>
+
+                <div class="back face">
+                    <h3 ng-if="!person.interests || person.interests.length == 0">No interests yet :(</h3>
+                    <h3 ng-if="person.interests.length">interests</h3>
+                    <ul>
+                        <li ng-repeat="interest in person.interests">
+                            {{interest}}
+                        </li>
+                    </ul>
+
+                    <h3 ng-if="!person.expectations || person.expectations.length == 0">No expectations yet :(</h3>
+                    <h3 ng-if="person.expectations.length">expectations</h3>
+                    <ul>
+                        <li ng-repeat="expectation in person.expectations">
+                            {{expectation}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
