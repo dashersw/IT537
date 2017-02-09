@@ -1,8 +1,8 @@
 [{"id":1,"name":"Armagan Amcalar","interests":["JavaScript","Node.js","Microservices","Docker"],"expectations":["a stellar semester","a lot of collaboration"]},{"id":2,"name":"Zeki Celik","interests":["Chess","Philosophy"],"expectations":["a basic understanding of front-end tech"]},{"id":3,"name":"Ulas Can Kirbas","interests":["Gaming","Series"],"expectations":["a basic understanding of front-end tech"]},{"id":4,"name":"Sezen Kaya","interests":["Gaming","Drums"],"expectations":["improve coding skills to help testing"]},{"id":5,"name":"Mehmet Ali Gunay","interests":["Gaming","Programming languages"],"expectations":["personal web page"]},{"id":6,"name":"Ugur Bayazidoglu","interests":["Automation"],"expectations":["Enough experience to lead a software project"]},{"id":7,"name":"Gokhan Saman","interests":["Software development","Integrating code with machines"],"expectations":["Free my website of WordPress"]},{"id":8,"name":"Koray Guney","interests":["Long-distance Running","Piano"],"expectations":["Help build a website for the final project"]},{"id":9,"name":"Lutfi Usluer","interests":["Physics","Chess"],"expectations":["Hands-on experience","Enough motivation to build a project with lecture contents"]},{"id":10,"name":"Bulent Ikizkaya","interests":["History of Economics"],"expectations":["Practical experience to build a B2B web project"]},{"id":11,"name":"Berk Kefeli","interests":["Basketball","Gaming"],"expectations":["Personal homepage","Advanced front-end knowledge"]},{"id":12,"name":"Onur Solak","interests":["Sports","Heavy consumption of music & films","Gaming"],"expectations":["Enough front-end experience for a back-end developer"]},{"id":13,"name":"Merve Cavdar","interests":["Theater","Pilates","Cooking"],"expectations":["Expertise about software / system architecture"]},{"id":14,"name":"Kubra Gizem Bicer","interests":["Travelling","Swimming"],"expectations":["A lot of homeworks","More advanced topics after the midterm"]},{"id":15,"name":"Ezgi Catalbas","interests":["Automation","Yoga","Fashion & decoration","Singing"],"expectations":["Enough experience to build a website about fashion & decoration"]},{"id":16,"name":"Cem Simsek","interests":["Programming","Guitar"],"expectations":["Consolidating existing web development experience"]}],[
 ({
-    id:18,
-    name: 'Cansu Kurban',
-    interests:['Drama','Dance', 'Music'],
-    expectations: ['Learn more!']
+    "id":18,
+    "name": "Cansu Kurban",
+    "interests":["Drama", "Dancing", "Travelling"],
+    "expectations": ["Learn more!"]
 })]
 ;
