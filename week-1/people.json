@@ -94,5 +94,11 @@
         "name": "Cem Simsek",
         "interests": ["Programming", "Guitar"],
         "expectations": ["Consolidating existing web development experience"]
+    },
+    {
+        "id": 19,
+        "name": "Edagul Erten",
+        "interests": ["Swimming"],
+        "expectations": ["Learning develop creating front-end side of a web site"]
     }
 ]
