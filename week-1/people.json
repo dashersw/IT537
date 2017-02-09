@@ -101,10 +101,9 @@
         "interests": ["Origami", "Bowling", "Photography"],
         "expectations": ["Building a personal web site using AngularJS & AJAX"]
     },
-	{
-		"id":18,
-		"name": "Cansu Kurban",
-		"interests":["Drama","Dancing", "Travelling"],
-		"expectations": ["Learn more!"]
+    {	"id":18,
+	"name": "Cansu Kurban",
+	"interests":["Drama","Dancing", "Travelling"],
+	"expectations": ["Learn more!"]
 }
 ]
