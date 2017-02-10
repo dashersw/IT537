@@ -98,7 +98,7 @@
     {
         "id": 17,
         "name": "Ergul Efeoglu",
-        "interests": ["Origami", "Bowling", "Photography"],
+        "interests": ["Origami", "Bowling", "Photography", "Travelling"],
         "expectations": ["Building a personal web site using AngularJS & AJAX"]
     }
 ]
