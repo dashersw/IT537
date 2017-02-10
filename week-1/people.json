@@ -8,8 +8,8 @@
     {
         "id": 2,
         "name": "Zeki Celik",
-        "interests": ["Chess", "Philosophy"],
-        "expectations": ["Decide a career as a front-end dev. or back-end dev."]
+        "interests": ["Chess", "Philosophy", "Cycling"],
+        "expectations": ["Decide a career as a front-end dev. or back-end dev.", "Enough experience to be in a software project"]
     },
     {
         "id": 3,
