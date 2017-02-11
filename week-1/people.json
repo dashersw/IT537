@@ -62,8 +62,8 @@
     {
         "id": 11,
         "name": "Berk Kefeli",
-        "interests": ["Basketball", "Gaming"],
-        "expectations": ["Personal homepage", "Advanced front-end knowledge"]
+        "interests": ["Basketball", "Gaming", "Programming"],
+        "expectations": ["Creating a top-notch website", "Advanced front-end knowledge"]
     },
     {
         "id": 12,
