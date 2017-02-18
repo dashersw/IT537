@@ -1,0 +1,27 @@
+input {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+header {
+    background: #666;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background: rgba(0,0,0,0.3);
+}

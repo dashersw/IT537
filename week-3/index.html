@@ -5,6 +5,21 @@
         <link rel="stylesheet" href="./src/style/base.css">
     </head>
     <body>
+        <header>
+            This is a header
+            <nav>
+                <a href="/login">Log in</a>
+            </nav>
+        </header>
+        <h1>IT537 Week 3</h1>
+        <h2>Example 1 <span>The DOM</span></h2>
+        <form>
+            <input type="text" name="email" placeholder="E-mail" />
+            <input type="password" name="password" placeholder="Password" />
+            <input type="submit" name="submit" />
+            <span id="output"></span>
+        </form>
+
         <script src="./lib/babel-browser-build.js"></script>
         <script src="./lib/browser-es-module-loader.js"></script>
         <script type="module" src="./src/index.js"></script>
