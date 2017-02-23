@@ -1,0 +1,22 @@
+* {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-user-select: none;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: none;
+    font-family: "-apple-system", "SFUIText-Regular", "Helvetica Neue", sans-serif;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+}

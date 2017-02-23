@@ -1,0 +1,6 @@
+thread-preview(
+    ng-repeat="thread in $ctrl.threads | orderBy:'-lastMessage.date'",
+    thread-data="thread",
+    ng-click="$ctrl.threadClick({thread: thread})",
+    ng-class="{active: $ctrl.isThreadActive(thread), unread: thread.unread}")
+

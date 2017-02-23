@@ -1,0 +1,9 @@
+thread
+    img(ng-src="{{ $ctrl.user.picture.thumbnail }}", ng-if="$ctrl.user", alt="")
+    username(ng-if="$ctrl.user")
+        strong(ng-bind="$ctrl.user.getFullName()")
+    messages(ng-if="$ctrl.thread", reset-scroll reset="$ctrl.registerReset")
+        message(ng-repeat="message in $ctrl.thread.messages track by $index", ng-bind="message.message")
+entry
+    img(ng-src="{{ $ctrl.owner.picture.thumbnail }}")
+    input(type="text", placeholder="This demo is for demonstrating unread threads synchronisation, so we left message typing out for the sake of brevity.")

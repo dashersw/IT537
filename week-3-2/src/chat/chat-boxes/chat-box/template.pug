@@ -1,0 +1,8 @@
+header(click-container, click-container-cb="chatbox.clickContainerCb")
+    img(ng-src="{{ chatbox.threadData.user.picture.thumbnail }}")
+    strong(ng-bind="chatbox.threadData.user.getFullName()")
+    close(ng-click="chatbox.close()") ✖
+    minimize(ng-click="chatbox.toggle()")
+
+content
+    chat-pane(thread="chatbox.threadData")
