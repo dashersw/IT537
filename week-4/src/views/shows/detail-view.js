@@ -17,10 +17,19 @@ class DetailView extends erste.View {
     template() {
         var imgFile = this.show['images']['fanart'].split('/').slice(-1);
 
-        return '<view class="detail-view" id="' + this.id + '"' +
-            'style="-webkit-transform: translate3d(100%, 0, ' + this.index + 'px);' +
-            'background-image: url(static/img/poster/' + imgFile + ')">' +
-            '</view>';
+        var show = this.show;
+
+        return `
+<view class="detail-view" id="${this.id}"
+style="-webkit-transform: translate3d(100%, 0, ${this.index}px);
+background-image: url(static/img/poster/${imgFile})">
+    <div class="info">
+        <p>Title: ${show.title}</p>
+        <p>Year: ${show.year}</p>
+        <p># of seasons: ${show.num_seasons}</p>
+    </div>
+</view>
+`;
     }
 
     get events() {

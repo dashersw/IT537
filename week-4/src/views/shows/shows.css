@@ -56,6 +56,16 @@ show-title {
     font-size: 10px;
 }
 
+.detail-view .info {
+    background: rgba(0,0,0,0.8);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    font-size: 60px;
+    padding: 40px;
+    line-height: 1.7;
+}
+
 .pull-to-refresh {
     position: absolute;
     top: 0px;
