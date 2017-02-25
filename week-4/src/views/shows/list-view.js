@@ -2,9 +2,6 @@ var ListViewModel = require('./list-view-model');
 var ListItem = require('./list-item');
 var DetailView = require('./detail-view');
 
-// goog.require('app.ui.InfiniteScrollComponent');
-// goog.require('tart.ui.P2RComponent');
-
 class ListView extends erste.View {
     constructor() {
         super();
