@@ -1,1 +1,1 @@
-cfg.env = 'test';
+cfg.ENV = 'test';
