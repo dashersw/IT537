@@ -1,0 +1,9 @@
+content-pane {
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: calc(100% - 280px);
+    left: 280px;
+    overflow: scroll;
+}

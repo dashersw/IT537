@@ -7,3 +7,8 @@ require('./root');
 require('./thread/thread-list');
 require('./thread/thread-preview');
 require('./thread/threads-popover');
+require('./panes/menu-pane');
+require('./panes/content-pane');
+require('./content/bio');
+require('./content/links');
+require('./content/posts');

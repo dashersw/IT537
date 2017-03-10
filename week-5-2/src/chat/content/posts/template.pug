@@ -1,0 +1,8 @@
+h1 Posts
+p Hello! These are my blog posts!
+
+div(ng-repeat="post in $ctrl.posts")
+    h2 {{post.title}}
+    p {{post.body}}
+    div.tags
+        span(ng-repeat="tag in post.tags") {{tag}}
