@@ -14,8 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.6.2",
-    "angular-mocks": "^1.6.2",
+    "angular": "^1.6.3",
+    "angular-mocks": "^1.6.3",
     "angular-outer-click": "^0.1.0"
   }
 }
