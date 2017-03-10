@@ -1,0 +1,5 @@
+img(ng-src="{{ $ctrl.threadData.user.picture.thumbnail }}")
+span
+    strong(ng-bind="$ctrl.threadData.user.getFullName()")
+    br
+    last-message(ng-bind="$ctrl.threadData.lastMessage.message")
