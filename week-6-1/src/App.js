@@ -12,7 +12,7 @@ class University extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to {this.props.name}</h2>
         </div>
-        <p className="App-intro" style={ {backgroundColor: this.props.color } }>
+        <p className="App-intro" style={{ backgroundColor: this.props.color }}>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
@@ -22,7 +22,7 @@ class University extends Component {
 
 class App extends Component {
   render() {
-    var universities = [{name: 'Sabanci', color: '#ddf'}, {name: 'Bilkent', color: '#fdd'}, {name: 'Koc', color: '#dfd'}];
+    var universities = [{ name: 'Sabanci', color: '#ddf' }, { name: 'Bilkent', color: '#fdd' }, { name: 'Koc', color: '#dfd' }];
 
     var universityViewArray = universities.
       filter(u => u.name.length > 3).
