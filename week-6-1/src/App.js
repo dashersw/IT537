@@ -24,7 +24,9 @@ class App extends Component {
   render() {
     var universities = [{name: 'Sabanci', color: '#ddf'}, {name: 'Bilkent', color: '#fdd'}, {name: 'Koc', color: '#dfd'}];
 
-    var universityViewArray = universities.map(u => <University name={u.name} color={u.color}/>);
+    var universityViewArray = universities.
+      filter(u => u.name.length > 3).
+      map(u => <University name={u.name} color={u.color} />);
 
     return <div>
       {universityViewArray}
