@@ -13,7 +13,7 @@ class University extends Component {
           <h2>Welcome to {this.props.name}</h2>
         </div>
         <p className="App-intro" style={ {backgroundColor: this.props.color } }>
-          To gt started, edit <code>src/App.js</code> and save to reload.
+          To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
     );
