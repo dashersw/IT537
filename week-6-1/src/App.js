@@ -21,15 +21,32 @@ class University extends Component {
 }
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = { selection: '' };
+
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(e) {
+    this.setState({ selection: e.target.value });
+  }
+
   render() {
     var universities = [{ name: 'Sabanci', color: '#ddf' }, { name: 'Bilkent', color: '#fdd' }, { name: 'Koc', color: '#dfd' }];
 
     var universityViewArray = universities.
-      filter(u => u.name.length > 3).
+      filter(u => u.name.toLowerCase().startsWith(this.state.selection.toLowerCase())).
       map(u => <University name={u.name} color={u.color} />);
 
+    var additionalInfo = universityViewArray.length == 0 ? 'No matches' : universityViewArray.length + ' matches';
     return <div>
+      <input onChange={this.onChange} value={this.state.selection} />
+      <span>{this.state.selection}</span>
       {universityViewArray}
+      <div>
+        {additionalInfo}
+      </div>
     </div>
   }
 }
