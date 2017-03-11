@@ -22,9 +22,9 @@ class University extends Component {
 
 class App extends Component {
   render() {
-    var names = ['Sabanci', 'Bilkent', 'Koc'];
+    var universities = [{name: 'Sabanci', color: '#ddf'}, {name: 'Bilkent', color: '#fdd'}, {name: 'Koc', color: '#dfd'}];
 
-    var universityViewArray = names.map(n => <University name={n} color='#ddd'/>);
+    var universityViewArray = universities.map(u => <University name={u.name} color={u.color}/>);
 
     return <div>
       {universityViewArray}
