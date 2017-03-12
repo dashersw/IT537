@@ -34,6 +34,6 @@
     </plugin>
     <plugin name="cordova-plugin-googlemaps" spec="~1.4.0">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyCFF1Sr2QCXpf0B63GqJj7H1eTmqD74ozw" />
-        <variable name="API_KEY_FOR_IOS" value="AIzaSyBjIS_Y_awieAUkgWujHzQ" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyBjIS_Y_awieAUkgWujHzQ-dg6JmlMoJXM" />
     </plugin>
 </widget>

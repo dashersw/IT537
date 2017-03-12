@@ -20,9 +20,13 @@ tab-items {
 tab-item {
     display: inline-block;
     text-align: center;
-    width: 33%;
+    width: 25%;
 }
 
 tab-item.active {
     background: #eee;
+}
+
+tab-view views > *:not(.active) {
+    transform: translate3d(100%, 0, 0) !important;
 }
