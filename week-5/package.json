@@ -40,7 +40,7 @@
     "watchify": "^3.9.0"
   },
   "dependencies": {
-    "erste": "^1.2.2",
+    "erste": "^1.2.3",
     "eventemitter2": "^3.0.2"
   }
 }
