@@ -21,7 +21,7 @@ var APP_PLATFORM = process.env.APP_PLATFORM || 'web';
 
 gulp.task('default', function(callback) {
     runSequence('clean:before',
-        ['compile-dev', 'lib-dev', 'css-dev'],
+        ['compile-dev', 'css-dev'],
         ['static'],
         ['process-html-dev'],
         'clean:after',
@@ -35,15 +35,6 @@ gulp.task('watch-css', function() {
 
 gulp.task('compile-dev', function(cb) {
     compileJs({watch: true}, cb);
-});
-
-gulp.task('lib-dev', function() {
-    var bowerMain = require('bower-main'),
-        bowerMainJavaScriptFiles = bowerMain('js', 'min.js', '');
-
-    return gulp.src(bowerMainJavaScriptFiles.normal).
-        pipe(concat('lib.js')).
-        pipe(gulp.dest('www'));
 });
 
 gulp.task('css-dev', function() {
@@ -90,7 +81,7 @@ gulp.task('process-html-dev', ['get-css'], function() {
     return gulp.src('src/index.html').
         pipe(htmlReplace({
             styles: css,
-            scripts: ['cordova.js', 'lib.js', 'index.js'],
+            scripts: ['cordova.js', 'index.js'],
             config: config
         })).
         pipe(gulp.dest('www')).

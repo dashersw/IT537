@@ -1,4 +1,6 @@
-class ListItem extends erste.Component {
+import {Component} from 'erste';
+
+export default class ListItem extends Component {
     constructor(show) {
         super();
 
@@ -15,7 +17,4 @@ style="background-image: url(static/img/cover/${imgFile})">
 </list-item>
 `;
     };
-
 }
-
-module.exports = ListItem;

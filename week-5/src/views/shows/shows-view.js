@@ -1,17 +1,25 @@
-var ListView = require('./list-view');
-var __ = erste.locale.__;
+import ListView from './list-view';
+import {View, ViewManager, NavBar, __} from 'erste';
 
-class ShowsView extends erste.View {
+export default class ShowsView extends View {
     constructor() {
         super();
 
-        this.className = 'shows-view';
+        this.vm = new ViewManager(this);
+        this.listView = new ListView(this.vm);
 
-        this.navBar = new erste.NavBar({
+        this.navBar = new NavBar({
             title: __('Top Shows'),
             hasMenuButton: true,
             hasBackButton: true
         });
+
+        this.navBar.vm = this.vm;
+    }
+
+    onAfterRender() {
+        super.onAfterRender();
+        this.vm.setCurrentView(this.listView);
     }
 
     onActivation() {
@@ -19,19 +27,11 @@ class ShowsView extends erste.View {
             StatusBar.styleLightContent();
     }
 
-    onAfterRender() {
-        this.vm = new erste.ViewManager(this.el);
-        this.navBar.vm = this.vm;
-
-        this.listView = new ListView();
-        this.listView.vm = this.vm;
-
-        this.vm.setCurrentView(this.listView);
-    };
-
-    template_content() {
-        return this.navBar;
+    template() {
+        return `
+<view class="shows-view">
+    ${this.navBar}
+    ${this.listView}
+</view>`;
     }
 }
-
-module.exports = ShowsView;

@@ -1,6 +1,7 @@
-var ShowsModel = require('../../shows-model');
+import ShowsModel from '../../shows-model';
+import EventEmitter2 from 'EventEmitter2';
 
-class ListViewModel extends EventEmitter2 {
+export default class ListViewModel extends EventEmitter2 {
     constructor() {
         super();
 
@@ -16,12 +17,9 @@ class ListViewModel extends EventEmitter2 {
         });
     };
 
-
-
     getShowById(id) {
         return this.shows.find(show => show['_id'] == id)
     }
-
 
     loadMore() {
         ShowsModel.fetch(shows => {
@@ -46,7 +44,6 @@ class ListViewModel extends EventEmitter2 {
 
 function shuffle(arr) {
     for (var i = arr.length - 1; i > 0; i--) {
-        // Choose a random array index in [0, i] (inclusive with i).
         var j = Math.floor(Math.random() * (i + 1));
 
         var tmp = arr[i];
@@ -54,5 +51,3 @@ function shuffle(arr) {
         arr[j] = tmp;
     }
 }
-
-module.exports = ListViewModel;

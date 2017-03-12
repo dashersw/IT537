@@ -1,23 +1,36 @@
-var __ = erste.locale.__;
+import { View, __ } from 'erste';
 
-class AboutView extends erste.View {
-    constructor() {
-        super();
-
-        this.className = 'about-view';
-    }
-
+export default class AboutView extends View {
     onActivation() {
         if (cfg.PLATFORM == 'device')
             StatusBar.styleDefault();
     }
 
-    template_content() {
+    onAfterRender() {
+        super.onAfterRender();
+
+        // if (window.plugin && plugin && plugin.google && plugin.google.maps)
+        //     this.map = plugin.google.maps.Map.getMap(this.el);
+    }
+
+    onTitleTap() {
+        this.map && this.map.showDialog();
+    }
+
+    template() {
         return `
-<h1>${__('Top TV Show Posters')}</h1>
-<p>${__('An erste.js mobile app demo')}</p>
+<view class="about-view">
+    <h1>${__('Top TV Show Posters')}</h1>
+    <p>${__('An erste.js mobile app demo')}</p>
+</view>
 `;
     }
-}
 
-module.exports = AboutView;
+    get events() {
+        return {
+            'tap': {
+                'h1': this.onTitleTap
+            }
+        }
+    }
+}

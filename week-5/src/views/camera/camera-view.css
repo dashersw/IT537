@@ -1,0 +1,21 @@
+.camera-view {
+    overflow: scroll;
+    text-align: center;
+    padding-top: 360px;
+}
+
+.camera-view h1 {
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 130px;
+    padding-bottom: 40px;
+}
+
+.camera img {
+    display: block;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0
+}

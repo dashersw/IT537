@@ -1,17 +1,21 @@
-var Sidebar = require('./views/sidebar/sidebar');
-var MainView = require('./views/main-view');
-var locale = require('./lib/locale');
+import {ViewManager} from 'erste';
 
-class Application {
+import Sidebar from './views/sidebar/sidebar';
+import MainView from './views/main-view';
+import locale from './lib/locale';
+
+export default class Application {
     constructor() {
-        this.vm = new erste.ViewManager();
+        locale('tr');
 
-        var mainView = new MainView(this.vm);
+        const vm = new ViewManager();
 
-        mainView.render(document.body);
+        const sidebar = new Sidebar();
+        sidebar.vm = vm;
+        sidebar.on('switchView', e => mainView.activateItemByName(e.view));
+        sidebar.render(document.body);
 
-        this.vm.setCurrentView(mainView);
+        var mainView = new MainView(vm);
+        vm.setCurrentView(mainView);
     }
 }
-
-module.exports = new Application();
