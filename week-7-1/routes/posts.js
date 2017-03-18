@@ -18,7 +18,7 @@ router.post('/', function(req, res, next) {
 
   posts.push(req.body);
 
-  res.sendStatus(200);
+  res.end();
 });
 
 module.exports = router;

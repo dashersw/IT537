@@ -6,3 +6,14 @@ div(ng-repeat="post in $ctrl.posts")
     p {{post.body}}
     div.tags
         span(ng-repeat="tag in post.tags") {{tag}}
+
+form(ng-submit="$ctrl.saveNewPost()")
+    h3 New Post
+    div
+        label Title
+        input(type="text" name="title" ng-model="$ctrl.newPost.title")
+    div
+        label Body
+        textarea(name="body" ng-model="$ctrl.newPost.body")
+    div
+        input(type="submit" value="New Post")
