@@ -18,7 +18,8 @@ var compileJs = require('./tasks/compilejs');
 
 gulp.task('default', function(callback) {
     runSequence('clean:before',
-        ['compile-dev', 'lib-dev', 'templates-dev', 'css-dev'],
+        'css-dev',
+        ['compile-dev', 'lib-dev', 'templates-dev'],
         ['static'],
         ['process-html-dev'],
         'clean:after',
