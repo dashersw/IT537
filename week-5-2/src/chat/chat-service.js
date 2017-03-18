@@ -26,56 +26,56 @@ class ChatService extends EventEmitter {
 
         this._threads = [];
 
-        var onInitialData = response => {
-            this._threads = response.data;
+        // var onInitialData = response => {
+        //     this._threads = response.data;
 
-            this._threads = this._threads.map(thread => new Thread(thread));
+        //     this._threads = this._threads.map(thread => new Thread(thread));
 
-            this.setActiveThread(this._threads[0]);
+        //     this.setActiveThread(this._threads[0]);
 
-            threadDeferred.resolve(this._threads);
-        };
+        //     threadDeferred.resolve(this._threads);
+        // };
 
-        var getThreads = function() {
-            return ChatRepository.getThreads().then(onInitialData);
-        };
+        // var getThreads = function() {
+        //     return ChatRepository.getThreads().then(onInitialData);
+        // };
 
-        var onUpdate = updates => {
-            updates.forEach(update => {
-                var correspondingThread = this.getThreadById(update.thread.id);
+        // var onUpdate = updates => {
+        //     updates.forEach(update => {
+        //         var correspondingThread = this.getThreadById(update.thread.id);
 
-                if (!correspondingThread) {
-                    return;
-                }
+        //         if (!correspondingThread) {
+        //             return;
+        //         }
 
-                correspondingThread.messages.push(...update.thread.messages.slice(correspondingThread.messages.length));
+        //         correspondingThread.messages.push(...update.thread.messages.slice(correspondingThread.messages.length));
 
-                correspondingThread.unread = (update.thread.id !== this.activeThread.id && (this.activeChatBox ? this.activeChatBox.id != update.thread.id : true));
-            });
+        //         correspondingThread.unread = (update.thread.id !== this.activeThread.id && (this.activeChatBox ? this.activeChatBox.id != update.thread.id : true));
+        //     });
 
-            this.trigger(this.EventType.UPDATE, updates);
-            setupUpdates();
-        };
+        //     this.trigger(this.EventType.UPDATE, updates);
+        //     setupUpdates();
+        // };
 
-        var setupUpdates = () => {
-            $timeout(() => {
-                ChatRepository.getUpdates().then(function(response) {
-                    var updates = response.data;
+        // var setupUpdates = () => {
+        //     $timeout(() => {
+        //         ChatRepository.getUpdates().then(function(response) {
+        //             var updates = response.data;
 
-                    onUpdate(updates);
-                });
-            }, 1000);
-        };
+        //             onUpdate(updates);
+        //         });
+        //     }, 1000);
+        // };
 
-        var ownerDeferred = $q.defer();
+        // var ownerDeferred = $q.defer();
 
-        this.owner = ownerDeferred.promise;
-        ChatRepository.getOwner().then(function(response) {
-            ownerDeferred.resolve(response.data);
-        });
+        // this.owner = ownerDeferred.promise;
+        // ChatRepository.getOwner().then(function(response) {
+        //     ownerDeferred.resolve(response.data);
+        // });
 
-        getThreads();
-        setupUpdates();
+        // getThreads();
+        // setupUpdates();
     }
 
     setActiveThread(thread) {

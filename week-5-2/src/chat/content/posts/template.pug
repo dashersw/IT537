@@ -6,3 +6,19 @@ div(ng-repeat="post in $ctrl.posts")
     p {{post.body}}
     div.tags
         span(ng-repeat="tag in post.tags") {{tag}}
+
+div
+    h3 Post Preview
+    p {{$ctrl.newPost.title}}
+    p {{$ctrl.newPost.body}}
+
+form(ng-submit="$ctrl.createNewPost()")
+    h3 New Post
+    div
+        label Title
+        input(type="text" ng-model="$ctrl.newPost.title" name="title")
+    div
+        label body
+        textarea(ng-model="$ctrl.newPost.body" name="body")
+
+    input(type="submit" value="Create new post")
