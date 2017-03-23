@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "test": "nyc ava --verbose",
+    "test-live": "nodemon -x npm test"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "nyc": "^10.1.2"
+  }
+}
