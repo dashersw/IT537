@@ -100,5 +100,11 @@
         "name": "Ergul Efeoglu",
         "interests": ["Origami", "Bowling", "Photography", "Travelling"],
         "expectations": ["Building a personal web site using AngularJS & AJAX"]
+    },
+    {
+        "id": 18,
+        "name": "Merve ERDOL",
+        "interests": ["HTML5", "CSS3", "JavaScript", "NodeJS"],
+        "expectations": ["Being a Front End Web Developer."]
     }
 ]
