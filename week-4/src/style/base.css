@@ -24,7 +24,7 @@ textarea {
 
 a { text-decoration: none; }
 
-html, body, view {
+html, body, view, [view] {
     top: 0;
     bottom: 0;
     width: 100%;
@@ -41,7 +41,7 @@ body {
     font-size: 36px;
 }
 
-view {
+view, [view] {
     -webkit-overflow-scrolling: touch;
     -webkit-transition: -webkit-transform .35s;
     z-index: 0;

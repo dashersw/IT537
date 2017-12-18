@@ -12,10 +12,12 @@ class AboutView extends erste.View {
             StatusBar.styleDefault();
     }
 
-    get template_content() {
+    template() {
         return `
-<h1>${__('Top TV Show Posters')}</h1>
-<p>${__('An erste.js mobile app demo')}</p>
+<view class="about-view">
+    <h1>${__('Top TV Show Posters')}</h1>
+    <p>${__('An erste.js mobile app demo')}</p>
+</view>
 `;
     }
 }

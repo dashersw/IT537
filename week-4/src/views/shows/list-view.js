@@ -48,11 +48,7 @@ class ListView extends erste.View {
 
         // this.p2rComponent.reset();
 
-        this.showComponents = this.model.shows.map(show => new ListItem(show));
-
-        var markup = this.showComponents.map(cmp => cmp.template()).join('');
-
-        this.$('list-items').innerHTML = markup;
+        this.$('list-items').innerHTML = this.model.shows.map(show => new ListItem(show)).join('');
         // this.infiniteScrollComponent.showSpinner();
     };
 

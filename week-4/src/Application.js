@@ -4,13 +4,15 @@ var locale = require('./lib/locale');
 
 class Application {
     constructor() {
-        this.vm = new erste.ViewManager();
+        var vm = new erste.ViewManager();
+        var mainView = new MainView(vm);
+        vm.setCurrentView(mainView);
 
-        var mainView = new MainView(this.vm);
+        var sidebar = new Sidebar();
 
-        mainView.render(document.body);
-
-        this.vm.setCurrentView(mainView);
+        sidebar.vm = vm;
+        sidebar.on('switchView', e => mainView.activateItemByName(e.view));
+        sidebar.render(document.body);
     }
 }
 

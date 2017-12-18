@@ -1,7 +1,7 @@
 var __ = erste.locale.__;
 
 class Sidebar extends erste.Sidebar {
-    get template_items() {
+    template_items() {
         return `
 <sidebar-item class="sidebar-item-shows" data-view="shows"><i class="icon-signup"></i>${__('Shows')}
     <sidebar-label>

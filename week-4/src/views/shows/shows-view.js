@@ -27,8 +27,11 @@ class ShowsView extends erste.View {
         this.vm.setCurrentView(this.listView);
     };
 
-    get template_content() {
-        return this.navBar.template();
+    template() {
+        return `
+<view>
+    ${this.navBar}
+</view>`;
     }
 }
 
