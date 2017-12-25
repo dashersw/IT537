@@ -100,5 +100,11 @@
         "name": "Ergul Efeoglu",
         "interests": ["Origami", "Bowling", "Photography", "Travelling"],
         "expectations": ["Building a personal web site using AngularJS & AJAX"]
+    },
+    {	
+	"id": 18,
+	"name": "Cansu Kurban",
+	"interests": ["Drama", "Dancing", "Travelling"],
+	"expectations": ["Learn more!"]
     }
 ]
